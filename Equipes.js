@@ -162,6 +162,7 @@ const styles = StyleSheet.create({
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
     gap: 15,
     marginHorizontal: 20,
     marginTop: 15,
@@ -171,9 +172,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#151515',
     borderRadius: 12,
     overflow: 'hidden',
-    width: '48%',
-    minWidth: 260,
-    flexGrow: 1,
+    width: 275,
   },
 
   imageContainer: {
