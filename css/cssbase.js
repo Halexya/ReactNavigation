@@ -12,7 +12,7 @@ export const cssBase = StyleSheet.create({
     },
 
 
-    
+
     banner: {
         marginHorizontal: 20,
         height: 350,
@@ -69,6 +69,21 @@ export const cssBase = StyleSheet.create({
         marginTop: 5,
         marginBottom: 5,
     },
+    titulo3: {
+        color: '#fff',
+        fontSize: 25,
+        fontWeight: '900',
+        lineHeight: 27,
+        marginTop: 5,
+    },
+    titulo2: {
+        color: '#fff',
+        fontSize: 30,
+        fontWeight: '900',
+        lineHeight: 27,
+        marginTop: 5,
+        marginBottom: 5,
+    },
     textoSimples: {
         color: '#777',
         fontSize: 12,
@@ -100,7 +115,6 @@ export const cssBase = StyleSheet.create({
         marginVertical: 20,
     },
 
-
     card: {
         marginHorizontal: 20,
         marginTop: 15,
@@ -109,10 +123,28 @@ export const cssBase = StyleSheet.create({
         borderRadius: 12,
     },
 
-
     cardContent: {
         padding: 15,
     },
+
+    Number: {
+        position: 'absolute',
+        right: 25,
+        top: 10,
+        color: '#242424',
+        fontSize: 120,
+        fontWeight: '900',
+    },
+    escritaNumber: {
+        position: 'absolute',
+        right: 30,
+        bottom: 20,
+        color: '#555',
+        fontSize: 10,
+        fontWeight: '900',
+        letterSpacing: 2,
+    },
+
     buttonBanner: {
         backgroundColor: '#e10600',
         alignSelf: 'flex-start',

@@ -135,8 +135,8 @@ export default function Pilotos() {
               volta.</Text>
           </View>
 
-          <Text style={styles.Number}>20</Text>
-          <Text style={styles.escritaNumber}>PILOTOS</Text>
+          <Text style={cssBase.Number}>20</Text>
+          <Text style={cssBase.escritaNumber}>PILOTOS</Text>
         </View>
 
         <View style={cssBase.alinha}>
@@ -162,7 +162,6 @@ export default function Pilotos() {
 }
 
 
-/* CARD DO PILOTO */
 
 function DriverCard({ driver }) {
   const navigation = useNavigation();
@@ -184,7 +183,7 @@ function DriverCard({ driver }) {
 
       <View style={cssBase.cardContent}>
         <Text style={styles.pais}>{driver.country}</Text>
-        <Text style={cssBase.titulo2}>{driver.name}</Text>
+        <Text style={cssBase.titulo3}>{driver.name}</Text>
         <View style={cssBase.divider} />
         <Text style={cssBase.subtitulo} >{driver.team}</Text>
 
@@ -202,26 +201,6 @@ function DriverCard({ driver }) {
 
 
 const styles = StyleSheet.create({
-
-  Number: {
-    position: 'absolute',
-    right: 25,
-    top: 10,
-    color: '#242424',
-    fontSize: 120,
-    fontWeight: '900',
-  },
-  escritaNumber: {
-    position: 'absolute',
-    right: 30,
-    bottom: 20,
-    color: '#555',
-    fontSize: 10,
-    fontWeight: '900',
-    letterSpacing: 2,
-  },
-
-
   card: {
     backgroundColor: '#151515',
     borderRadius: 12,

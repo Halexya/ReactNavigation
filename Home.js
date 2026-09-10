@@ -15,16 +15,15 @@ export default function Home() {
                         <Text style={styles.logo}>F1 </Text>
                     </View>
                 </View>
-                {/* BANNER PRINCIPAL */}
                 <View style={cssBase.banner}>
                     <Image source={require('./assets/banner.jpg')} style={cssBase.bannerImage} />
-                    <View style={cssBase.bannerOverlay} /> 
+                    <View style={cssBase.bannerOverlay} />
                     <View style={cssBase.bannerContent}>
                         <Text style={cssBase.textoPequeno}> THE WORLD OF </Text>
                         <Text style={cssBase.titulo1}> FORMULA 1 </Text>
                         <Text style={cssBase.texto}> Velocidade, estratégia e emoção. </Text>
                         <Pressable style={cssBase.buttonBanner}
-                            onPress={() => navigation.navigate('Corridas')}>
+                            onPress={() => navigation.navigate('Ayrton Senna')}>
                             <Text style={cssBase.buttonText}>EXPLORAR F1</Text>
                         </Pressable>
                     </View>
@@ -80,13 +79,15 @@ export default function Home() {
                         image={require('./assets/pilotos.jpg')}
                         category="CORRIDAS"
                         title="A velocidade que define uma nova geração"
-                        route="Senna"
+                        route="Ayrton Senna"
                         navigation={navigation}
                     />
                     <NewsCard
                         image={require('./assets/estrategia.jpg')}
                         category="RACING"
-                        title="Estratégia pode decidir o resultado da corrida"
+                        title="Corrida é melhor com torcida, pesquise seu favorito."
+                        route="Pilotos"
+                        navigation={navigation}
                     />
                 </View>
 
@@ -118,15 +119,17 @@ function NewsCard({ image, category, title, route, navigation }) {
     return (
         <Pressable style={styles.card}>
 
-            <Image source={image} style={styles.cardImage}/>
+            <Image source={image} style={styles.cardImage} />
 
             <View style={cssBase.cardContent}>
                 <Text style={styles.categoria}>{category}</Text>
                 <Text style={cssBase.texto}> {title} </Text>
 
-                <Pressable style={cssBase.button} onPress={() => navigation.navigate(route)}>
-                    <Text style={cssBase.buttonText}>MAIS</Text>
-                </Pressable>
+                <View style={{paddingTop: 8}}>
+                    <Pressable style={cssBase.button} onPress={() => navigation.navigate(route)}>
+                        <Text style={cssBase.buttonText}>MAIS</Text>
+                    </Pressable>
+                </View>
 
             </View>
         </Pressable>
@@ -135,7 +138,7 @@ function NewsCard({ image, category, title, route, navigation }) {
 
 
 const styles = StyleSheet.create({
-    
+
     top: {
         paddingHorizontal: 25,
         paddingTop: 25,
@@ -151,7 +154,7 @@ const styles = StyleSheet.create({
         letterSpacing: 2,
     },
 
-    
+
     pais: {
         color: '#fff',
         fontWeight: '800',
@@ -181,7 +184,6 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         overflow: 'hidden',
     },
-    
     cardImage: {
         width: '100%',
         height: 150,
