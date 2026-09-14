@@ -103,8 +103,7 @@ export default function Corridas() {
                         pilotos que fizeram história nelas. </Text>
 
                     <Pressable style={styles.botao} onPress={() => setModalVisible(true)} >
-                        <Ionicons name="flag-outline" size={20} color="#fff" />
-                        <Text style={cssBase.buttonText}>CONHEÇA SENNA</Text>
+                        <Text style={cssBase.buttonText}>CONHEÇA O SENNA</Text>
 
                     </Pressable>
                 </View>
@@ -218,8 +217,6 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 25,
         padding: 30,
         paddingBottom: 40,
-        borderTopWidth: 2,
-        borderTopColor: '#e10600',
     },
     modalSubtitulo: {
         color: '#e10600',
