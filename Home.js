@@ -77,16 +77,16 @@ export default function Home() {
                 <View style={cssBase.alinha}>
                     <NewsCard
                         image={require('./assets/pilotos.jpg')}
-                        category="CORRIDAS"
+                        category="MELHOR"
                         title="A velocidade que define uma nova geração"
                         route="Ayrton Senna"
                         navigation={navigation}
                     />
                     <NewsCard
                         image={require('./assets/estrategia.jpg')}
-                        category="RACING"
-                        title="Corrida é melhor com torcida, pesquise seu favorito."
-                        route="Pilotos"
+                        category="CORRIDAS"
+                        title="O local também define a disputa."
+                        route="Corridas"
                         navigation={navigation}
                     />
                 </View>

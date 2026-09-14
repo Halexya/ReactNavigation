@@ -59,26 +59,11 @@ export default function Senna() {
         </View> 
  
         <View style={cssBase.alinha}> 
-          <Text style={cssBase.titulo}>EQUIPES</Text> 
-          <View style={cssBase.linha} /> 
- 
-        </View> 
- 
-        <View style={cssBase.card}> 
-          <Time name="Toleman" years="1984" /> 
-          <Time name="Lotus" years="1985 – 1987" /> 
-          <Time name="McLaren" years="1988 – 1993" /> 
-          <Time name="Williams" years="1994" /> 
- 
-        </View> 
- 
-        <View style={cssBase.alinha}> 
           <Text style={cssBase.titulo}>LEGADO</Text> 
           <View style={cssBase.linha} /> 
         </View> 
  
         <View style={cssBase.card}> 
-          <Ionicons name="trophy-outline" size={35} color="#e10600" /> 
           <Text style={cssBase.titulo2}>UM LEGADO ETERNO</Text> 
  
           <Text style={cssBase.texto}>Senna deixou uma marca profunda na Fórmula 1 e no 
@@ -97,22 +82,6 @@ export default function Senna() {
 } 
  
  
-function Time({ name, years }) { 
-  return ( 
-    <View style={styles.timeRow}> 
-      <View> 
-        <Ionicons name="car-sport-outline" size={22} color="#e10600" style={{margin:6}}/> 
-      </View> 
- 
-      <View> 
-        <Text style={styles.timeNome}> {name} </Text> 
-        <Text style={styles.timeAno}> {years} </Text> 
-      </View> 
- 
-    </View> 
-  ); 
-} 
- 
  
 const styles = StyleSheet.create({ 
  
@@ -126,24 +95,5 @@ const styles = StyleSheet.create({
     fontWeight: '900', 
   }, 
  
-  timeRow: { 
-    flexDirection: 'row', 
-    alignItems: 'center', 
-    padding: 7, 
-    borderBottomWidth: 1, 
-    borderBottomColor: '#292929', 
-  }, 
- 
-  timeNome: { 
-    color: '#fff', 
-    fontSize: 16, 
-    fontWeight: '800', 
-  }, 
- 
-  timeAno: { 
-    color: '#888', 
-    fontSize: 12, 
-    marginTop: 3, 
-  }, 
  
 });
