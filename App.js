@@ -7,6 +7,7 @@ import Home from './Home';
 import Senna from './Senna';
 import Pilotos from './Pilotos';
 import Equipes from './Equipes';
+import Corridas from './Corridas';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,13 +38,16 @@ export default function App() {
               iconName = focused ? 'home' : 'home-outline';
             }
             else if (route.name === 'Ayrton Senna') {
-              iconName = focused ? 'flag' : 'flag-outline';
+              iconName = focused ? 'trophy' : 'trophy-outline';
             }
             else if (route.name === 'Pilotos') {
               iconName = focused ? 'person' : 'person-outline';
+
+            } else if (route.name === 'Equipes') {
+              iconName = focused ? 'people' : 'people-outline';
             }
-            else if (route.name === 'Equipes') {
-              iconName = focused ? 'car-sport' : 'car-sport-outline';
+            else if (route.name === 'Corridas') {
+              iconName = focused ? 'flag' : 'flag-outline';
             }
 
             return (
@@ -56,9 +60,10 @@ export default function App() {
         <Tab.Screen name="Pilotos" component={Pilotos} />
         <Tab.Screen name="Equipes" component={Equipes} />
         <Tab.Screen name="Ayrton Senna" component={Senna} />
+        <Tab.Screen name="Corridas" component={Corridas} />
       </Tab.Navigator>
 
       <StatusBar style="light" />
-    </NavigationContainer>
+    </NavigationContainer >
   );
 }

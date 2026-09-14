@@ -9,7 +9,7 @@ export default function Home() {
 
     return (
         <View style={cssBase.container}>
-            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={cssBase.content} > {/* TOPO */}
+            <ScrollView showsVerticalScrollIndicator={true} contentContainerStyle={cssBase.content} >
                 <View style={styles.top}>
                     <View>
                         <Text style={styles.logo}>F1 </Text>
@@ -22,7 +22,7 @@ export default function Home() {
                         <Text style={cssBase.textoPequeno}> THE WORLD OF </Text>
                         <Text style={cssBase.titulo1}> FORMULA 1 </Text>
                         <Text style={cssBase.texto}> Velocidade, estratégia e emoção. </Text>
-                        <Pressable style={cssBase.buttonBanner}
+                        <Pressable style={cssBase.button1}
                             onPress={() => navigation.navigate('Ayrton Senna')}>
                             <Text style={cssBase.buttonText}>EXPLORAR F1</Text>
                         </Pressable>
@@ -125,7 +125,7 @@ function NewsCard({ image, category, title, route, navigation }) {
                 <Text style={styles.categoria}>{category}</Text>
                 <Text style={cssBase.texto}> {title} </Text>
 
-                <View style={{paddingTop: 8}}>
+                <View style={{ paddingTop: 8 }}>
                     <Pressable style={cssBase.button} onPress={() => navigation.navigate(route)}>
                         <Text style={cssBase.buttonText}>MAIS</Text>
                     </Pressable>

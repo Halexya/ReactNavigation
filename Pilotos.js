@@ -106,7 +106,7 @@ export default function Pilotos() {
   return (
     <View style={cssBase.container}>
 
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={cssBase.content}>
+      <ScrollView showsVerticalScrollIndicator={true} contentContainerStyle={cssBase.content}>
 
         <View style={{paddingHorizontal: 25, paddingTop: 25,}}>
           <Text style={cssBase.subtitulo}>FORMULA 1</Text>
@@ -145,13 +145,7 @@ export default function Pilotos() {
         </View>
 
 
-        <View style={{
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          gap: 15,
-          marginHorizontal: 20,
-          marginTop: 15,
-        }}>
+        <View style={cssBase.grid}>
           {driversFiltrados.map((driver) => (<DriverCard key={driver.number} driver={driver} />))}
         </View>
 
@@ -174,11 +168,11 @@ function DriverCard({ driver }) {
   return (
     <Pressable style={styles.card}>
 
-      <View style={styles.imageContainer}>
-        <Image source={driver.image} style={styles.driverImage} />
+      <View style={cssBase.imageContainer}>
+        <Image source={driver.image} style={cssBase.driverImage} />
 
-        <View style={styles.imageOverlay} />
-        <Text style={styles.driverNumber}>{driver.number}</Text>
+        <View style={cssBase.imageOverlay} />
+        <Text style={cssBase.driverNumber}>{driver.number}</Text>
       </View>
 
       <View style={cssBase.cardContent}>
@@ -190,7 +184,7 @@ function DriverCard({ driver }) {
 
 
         <Pressable style={cssBase.button} onPress={abrirEquipe} >
-          <Text style={cssBase.buttonText}>Equipe </Text>
+          <Text style={cssBase.buttonText}>Veja a Equipe</Text>
         </Pressable>
 
       </View>
@@ -209,33 +203,6 @@ const styles = StyleSheet.create({
     minWidth: 260,
     flexGrow: 1,
   },
-  imageContainer: {
-    height: 210,
-    position: 'relative',
-    overflow: 'hidden',
-  },
-  driverImage: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'cover',
-  },
-  imageOverlay: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    height: 90,
-    backgroundColor: 'rgba(0,0,0,0.45)',
-  },
-  driverNumber: {
-    position: 'absolute',
-    right: 12,
-    bottom: 5,
-    color: 'rgba(255,255,255,0.85)',
-    fontSize: 55,
-    fontWeight: '900',
-  },
-
 
   buscar: {
     flexDirection: 'row',

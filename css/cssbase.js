@@ -145,7 +145,43 @@ export const cssBase = StyleSheet.create({
         letterSpacing: 2,
     },
 
-    buttonBanner: {
+
+    grid: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        gap: 15,
+        marginHorizontal: 20,
+        marginTop: 15,
+    },
+    imageContainer: {
+        height: 210,
+        position: 'relative',
+        overflow: 'hidden',
+    },
+    driverImage: {
+        width: '100%',
+        height: '100%',
+        resizeMode: 'cover',
+    },
+    imageOverlay: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: 0,
+        height: 90,
+        backgroundColor: 'rgba(0,0,0,0.45)',
+    },
+    driverNumber: {
+        position: 'absolute',
+        right: 12,
+        bottom: 5,
+        color: 'rgba(255,255,255,0.85)',
+        fontSize: 55,
+        fontWeight: '900',
+    },
+
+    button1: {
         backgroundColor: '#e10600',
         alignSelf: 'flex-start',
         paddingHorizontal: 20,
@@ -162,7 +198,7 @@ export const cssBase = StyleSheet.create({
     },
     buttonText: {
         color: '#fff',
-        fontWeight: '700',
+        fontWeight: '800',
         fontSize: 12,
 
     },

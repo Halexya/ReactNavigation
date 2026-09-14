@@ -80,7 +80,7 @@ export default function Equipes() {
   return (
 
     <View style={cssBase.container}>
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={cssBase.content}>
+      <ScrollView showsVerticalScrollIndicator={true} contentContainerStyle={cssBase.content}>
         <View style={{ paddingHorizontal: 25, paddingTop: 25, }}>
           <Text style={cssBase.subtitulo}>FORMULA 1</Text>
           <Text style={cssBase.titulo1}>EQUIPES</Text>
@@ -118,7 +118,7 @@ export default function Equipes() {
           <View style={cssBase.linha} />
         </View>
 
-        <View style={styles.grid}>{teamsFiltradas.map((team) => (<TeamCard
+        <View style={cssBase.grid}>{teamsFiltradas.map((team) => (<TeamCard
           key={team.name} team={team} />))}
         </View>
 
@@ -158,15 +158,6 @@ function TeamCard({ team }) {
 
 
 const styles = StyleSheet.create({
-
-  grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    gap: 15,
-    marginHorizontal: 20,
-    marginTop: 15,
-  },
 
   cardEquipe: {
     backgroundColor: '#151515',
